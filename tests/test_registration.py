@@ -1,0 +1,11 @@
+import allure
+import pytest
+
+from pages.registration_page import RegistrationPage
+
+
+class TestRegistrationForm():
+    @pytest.mark.registration_test(scope='function', autouse=True)
+    def test_registration_form(self, browser):
+        page = RegistrationPage(browser, 'https://www.demoblaze.com/')
+        page.open_page()
