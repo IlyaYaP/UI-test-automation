@@ -1,8 +1,9 @@
 import os
 
 import allure
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class BasePage():
@@ -27,3 +28,14 @@ class BasePage():
         except NoSuchElementException:
             return False
         return True
+    
+    def is_alert_message_present(self, allert_message):
+        '''Функция проверки появления алерта с соответствующим сообщением'''
+        try:
+            WebDriverWait(self.browser, timeout=1).until(EC.alert_is_present(), 'Timed out waiting.')
+            print(self.browser.switch_to.alert.text)
+            assert self.browser.switch_to.alert.text == allert_message, 'The message in the alert box does not match the expected'
+        except TimeoutException:
+            return False
+        return True
+
