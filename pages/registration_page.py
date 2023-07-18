@@ -8,17 +8,24 @@ from data.registration_data import RegistrationData
 class RegistrationPage(BasePage):
 
     def registration_new_user(self):
-        with allure.step('Нажать кнопку регистрации\
+        """Функция регистрации нового пользователя"""
+        with allure.step('Нажаимаем на кнопку регистрации\
                           нового пользователя в navbar.'):
-            registration_button = self.find_element(
+            registration_button_novbar = self.find_element(
                             RegistrationLocators.registration_button_novbar)
-            registration_button.click()
-        with allure.step('Заполнить поля username и password.'):
+            registration_button_novbar.click()
+
+        with allure.step('Заполняем поля username и password.'):
             username_input_field = self.find_element(
                             RegistrationLocators.username)
             username_input_field.send_keys(RegistrationData.username)
             password_input_field = self.find_element(
                             RegistrationLocators.password)
             password_input_field.send_keys(RegistrationData.password)
-        # with allure.step('Нажать кнопку регистрации\
-        #                   нового пользователя в модальном окне.'):
+
+        with allure.step('Нажимаем на кнопку регистрации\
+                          нового пользователя в модальном окне регистрации.'):
+            registration_button_modal = self.find_element(
+                            RegistrationLocators.registration_button_modal)
+            registration_button_modal.click()
+            time.sleep(5)

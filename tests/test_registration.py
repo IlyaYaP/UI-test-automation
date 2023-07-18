@@ -10,3 +10,4 @@ class TestRegistrationForm():
         page = RegistrationPage(browser, 'https://www.demoblaze.com/')
         page.open_page()
         page.registration_new_user()
+        
