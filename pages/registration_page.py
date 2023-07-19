@@ -28,4 +28,3 @@ class RegistrationPage(BasePage):
             registration_button_modal = self.find_element(
                             RegistrationLocators.registration_button_modal)
             registration_button_modal.click()
-            time.sleep(5)

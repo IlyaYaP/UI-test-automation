@@ -8,3 +8,4 @@ class RegistrationData():
     password = fake.password()
     # username = 'ui_test_user'
     # password = 'ui_test_password'
+    sing_up_successful_message = 'Sign up successful.'
