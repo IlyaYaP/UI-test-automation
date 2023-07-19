@@ -20,31 +20,29 @@ class BasePage():
             self.browser.get(self.url)
 
     def find_element(self, locator):
-        '''Функция поиска элемента'''
+        '''Функция поиска элемента.'''
         return self.browser.find_element(*locator)
-
-    def is_element_present(self, how, what):
-        '''Функция проверки наличия элемента на странице'''
-        try:
-            self.browser.find_element(how, what)
-        except NoSuchElementException:
-            return False
-        return True
     
     def is_alert_message_present(self, allert_message):
-        '''Функция проверки появления алерта с соответствующим сообщением'''
+        '''Функция проверки появления алерта с соответствующим сообщением.'''
         with allure.step('Проверяем, что появился алерт с соответствующим сообщением'):
-            allure.attach(self.browser.get_screenshot_as_png(),
-                            name='Screenshot',
-                            attachment_type=AttachmentType.PNG)
+
             try:
                 WebDriverWait(self.browser, timeout=1).until(EC.alert_is_present(), 'Timed out waiting.')
                 sign_up_alert = self.browser.switch_to.alert
-                print(allert_message)
-                print(sign_up_alert.text)
                 assert sign_up_alert.text == allert_message, 'The message in the alert box does not match the expected'
+                # allure.attach(self.browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
                 sign_up_alert.accept()
             except TimeoutException:
+                return False
+            return True
+
+    def is_element_present(self, how, what):
+        '''Функция проверки наличия элемента.'''
+        with allure.step('Проверяем наличие нужного нам элемента'):
+            try:
+                self.browser.find_element(how, what)
+            except (NoSuchElementException):
                 return False
             return True
 
