@@ -1,6 +1,6 @@
 import allure
 import pytest
-from data.registration_data import RegistrationData
+from data.data import RegistrationData
 from selenium.webdriver.common.by import By
 from pages.registration_and_login_page import RegistrationAndLoginPage
 

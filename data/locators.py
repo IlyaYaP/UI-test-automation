@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
-from data.registration_data import RegistrationData
-
+from data.data import RegistrationData
 
 
 class RegistrationLocators():
@@ -15,4 +14,11 @@ class LoginLocators():
     username = (By.CSS_SELECTOR, '#loginusername')
     password = (By.CSS_SELECTOR, '#loginpassword')
     login_button_modal = (By.XPATH, '//button[text()="Log in"]')
-    # username_on_novbar = (By.XPATH, f'//button[text()="Welcome {RegistrationAndLoginPage.user_data[0]}"]')
+
+
+class ContactMessageLocators():
+    contact_button = (By.XPATH, '//a[text()="Contact"]')
+    recipient_email = (By.CSS_SELECTOR, '#recipient-email')
+    recipient_name = (By.CSS_SELECTOR, '#recipient-name')
+    recipient_message = (By.CSS_SELECTOR, '#message-text')
+    send_meesage_button = (By.XPATH, '//button[text()="Send message"]')

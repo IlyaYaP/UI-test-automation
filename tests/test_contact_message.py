@@ -1,0 +1,21 @@
+import allure
+import pytest
+import time
+from data.data import ContactMessageData
+from selenium.webdriver.common.by import By
+from pages.contact_message import ContactMessage
+
+
+@pytest.mark.contact_message_tests(scope='class', autouse=True)
+@allure.feature('Тесты формы отправления сообщения.')
+class TestContactMessageForm():
+
+    main_page_url = 'https://www.demoblaze.com/'
+
+    @allure.story('Тест отправления сообщения с контактами.')
+    def test_contact_message_form(self, browser):
+        page = ContactMessage(browser, self.main_page_url)
+        page.open_page()
+        page.contact_message()
+        page.is_alert_message_present(
+            ContactMessageData.contact_message)

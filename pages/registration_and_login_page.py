@@ -2,7 +2,7 @@ import allure
 import time
 from .base_page import BasePage
 from data.locators import RegistrationLocators, LoginLocators
-from data.registration_data import RegistrationData
+from data.data import RegistrationData
 from allure_commons.types import AttachmentType
 
 
