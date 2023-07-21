@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jul 21 19:31:13 GMT 2023","Fri Jul 21 19:31:14 GMT 2023","1307","tests","test_registration_and_login","TestRegistrationAndLoginForm","","","test_registration_form",""
+"passed","Fri Jul 21 19:31:15 GMT 2023","Fri Jul 21 19:31:17 GMT 2023","1775","tests","test_registration_and_login","TestRegistrationAndLoginForm","","","test_login_form",""
+"passed","Fri Jul 21 19:31:11 GMT 2023","Fri Jul 21 19:31:12 GMT 2023","1012","tests","test_contact_message","TestContactMessageForm","","","test_contact_message_form",""
