@@ -37,7 +37,8 @@ class RegistrationAndLoginPage(BasePage):
     def login_new_user(self):
         with allure.step('Нажаимаем на кнопку входа в учетную запись\
                           нового пользователя в navbar.'):
-            login_button_novbar = self.find_element(LoginLocators.login_button_novbar)
+            login_button_novbar = self.find_element(
+                                    LoginLocators.login_button_novbar)
             login_button_novbar.click()
 
         with allure.step('Заполняем поля username и password.'):
@@ -48,5 +49,6 @@ class RegistrationAndLoginPage(BasePage):
 
         with allure.step('Нажимаем на кнопку входа в учетную запись\
                           нового пользователя в модальном окне регистрации.'):
-            login_button_modal = self.find_element(LoginLocators.login_button_modal)
+            login_button_modal = self.find_element(
+                                LoginLocators.login_button_modal)
             login_button_modal.click()

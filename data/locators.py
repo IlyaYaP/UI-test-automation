@@ -1,5 +1,4 @@
 from selenium.webdriver.common.by import By
-from data.data import RegistrationData
 
 
 class RegistrationLocators():
@@ -22,3 +21,11 @@ class ContactMessageLocators():
     recipient_name = (By.CSS_SELECTOR, '#recipient-name')
     recipient_message = (By.CSS_SELECTOR, '#message-text')
     send_meesage_button = (By.XPATH, '//button[text()="Send message"]')
+
+
+class ShoppingCartLocators():
+    add_product_button = (By.XPATH, '//a[text()="Iphone 6 32gb"]')
+    add_product_shopping_cart = (By.XPATH, '//a[text()="Add to cart"]')
+    cart_button_novbar = (By.XPATH, '//a[text()="Cart"]')
+    product_title = (By.XPATH, '//a[text()="Iphone 6 32gb"]')
+    place_order_button = (By.XPATH, '//a[text()="Place Order"]')

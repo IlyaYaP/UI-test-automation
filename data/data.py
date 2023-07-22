@@ -16,3 +16,5 @@ class ContactMessageData():
     message = fake.company()
 
 
+class ShoppingCartData():
+    add_cart_message = 'Product added'

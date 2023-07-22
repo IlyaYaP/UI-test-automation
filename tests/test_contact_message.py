@@ -12,6 +12,7 @@ class TestContactMessageForm():
 
     main_page_url = 'https://www.demoblaze.com/'
 
+    @pytest.mark.contact_message_form()
     @allure.story('Тест отправления сообщения с контактами.')
     def test_contact_message_form(self, browser):
         page = ContactMessage(browser, self.main_page_url)
