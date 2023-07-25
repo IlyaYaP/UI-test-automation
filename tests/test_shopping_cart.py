@@ -1,7 +1,7 @@
 import allure
 import pytest
 import time
-from data.data import RegistrationData
+from data.data import ShoppingCartData
 from selenium.webdriver.common.by import By
 from pages.shopping_cart_page import ShoppingCartPage
 
@@ -17,6 +17,5 @@ class TestShoppingCart():
     def test_shopping_cart(self, browser):
         page = ShoppingCartPage(browser, self.main_page_url)
         page.open_page()
-        time.sleep(4)
         page.add_shopping_cart()
-        time.sleep(5)
+        page.is_element_present(By.XPATH, '//td[text()="Ihone 6 32gb"]')
