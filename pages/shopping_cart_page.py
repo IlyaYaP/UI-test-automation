@@ -5,6 +5,7 @@ from data.locators import ShoppingCartLocators
 from data.data import ShoppingCartData
 from allure_commons.types import AttachmentType
 from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
 
 
 class ShoppingCartPage(BasePage):
@@ -24,6 +25,9 @@ class ShoppingCartPage(BasePage):
         with allure.step('Переходим на страницу корзины, нажимая на кнопку в navbar'):
             cart_button_novbar = self.find_element(ShoppingCartLocators.cart_button_novbar)
             cart_button_novbar.click()
+
+
+
 
 
 

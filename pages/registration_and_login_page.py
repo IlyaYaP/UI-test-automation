@@ -4,6 +4,7 @@ from .base_page import BasePage
 from data.locators import RegistrationLocators, LoginLocators
 from data.data import RegistrationData
 from allure_commons.types import AttachmentType
+from selenium.webdriver.common.by import By
 
 
 class RegistrationAndLoginPage(BasePage):
@@ -52,3 +53,9 @@ class RegistrationAndLoginPage(BasePage):
             login_button_modal = self.find_element(
                                 LoginLocators.login_button_modal)
             login_button_modal.click()
+
+    def should_be_login_username(self, *locator):
+        '''Проверка наличия имя пользователя, после успешной регистрации'''
+        with allure.step('Проверяем, что после успешной регистрации и входа мы видим имя пользователя.'):
+            assert self.is_element_present(*locator), 'Login form is presented'
+

@@ -43,6 +43,14 @@ class BasePage():
             try:
                 self.browser.find_element(how, what)
             except (NoSuchElementException):
-                return False
-            return True
-
+                return True
+            return False
+    
+    # def is_element_present_timeout(self, how, what):
+    #     '''Функция проверки элемента на странице, ожидая.'''
+    #     try:
+    #         WebDriverWait(self.browser, timeout=2).until(EC.presence_of_all_elements_located((how, what)))
+    #         self.find_element(how, what)
+    #     except (TimeoutException):
+    #         return False
+    #     return False
