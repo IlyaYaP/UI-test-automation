@@ -28,4 +28,4 @@ class TestRegistrationAndLoginForm():
         page.open_page()
         page.login_new_user()
         page.should_be_login_username(By.XPATH,
-            f'//button[text()="Welcome {RegistrationAndLoginPage.user_data[0]}"]')
+            f'//a[text()="Welcome {RegistrationAndLoginPage.user_data[0]}"]')
