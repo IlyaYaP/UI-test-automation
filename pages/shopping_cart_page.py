@@ -26,6 +26,11 @@ class ShoppingCartPage(BasePage):
             cart_button_novbar = self.find_element(ShoppingCartLocators.cart_button_novbar)
             cart_button_novbar.click()
 
+    def should_be_product_in_cart(self, *locator):
+        '''Проверка наличия имя пользователя, после успешной регистрации'''
+        with allure.step('Проверяем, наличие продукта в корзине.'):
+            assert self.is_element_present(*locator), 'Product is not presented'
+
 
 
 

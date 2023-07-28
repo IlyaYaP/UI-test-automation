@@ -57,5 +57,5 @@ class RegistrationAndLoginPage(BasePage):
     def should_be_login_username(self, *locator):
         '''Проверка наличия имя пользователя, после успешной регистрации'''
         with allure.step('Проверяем, что после успешной регистрации и входа мы видим имя пользователя.'):
-            assert self.is_element_present(*locator), 'Login form is presented'
+            assert self.is_element_present(*locator), 'Login name is not presented.'
 

@@ -27,11 +27,5 @@ class TestRegistrationAndLoginForm():
         page = RegistrationAndLoginPage(browser, self.main_page_url)
         page.open_page()
         page.login_new_user()
-        time.sleep(4)
         page.should_be_login_username(By.XPATH,
-            f'//button[text()="Welcome \
-            {RegistrationAndLoginPage.user_data[0]}"]')
-        # page.is_element_present(
-        #     By.XPATH,
-        #     f'//button[text()="Welcome \
-        #     {RegistrationAndLoginPage.user_data[0]}"]')
+            f'//button[text()="Welcome {RegistrationAndLoginPage.user_data[0]}"]')

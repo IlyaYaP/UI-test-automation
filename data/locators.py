@@ -27,5 +27,5 @@ class ShoppingCartLocators():
     add_product_button = (By.XPATH, '//a[text()="Iphone 6 32gb"]')
     add_product_shopping_cart = (By.XPATH, '//a[text()="Add to cart"]')
     cart_button_novbar = (By.XPATH, '//a[text()="Cart"]')
-    product_title = (By.XPATH, '//a[text()="Iphone 6 32gb"]')
+    product_title = (By.XPATH, '//td[text()="Iphone 6 32gb"]')
     place_order_button = (By.XPATH, '//a[text()="Place Order"]')
