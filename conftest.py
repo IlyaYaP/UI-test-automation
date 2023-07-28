@@ -22,8 +22,8 @@ def browser(request):
     if browser_name == 'chrome':
         print('\nstart chrome browser for test..')
         option_chrome = webdriver.ChromeOptions()
-        option_chrome.add_argument('--headless')
-        # option_chrome.add_argument('--window-size=600,1400')
+        # option_chrome.add_argument('--headless')
+        option_chrome.add_argument('--window-size=600,1400')
         option_chrome.add_experimental_option('excludeSwitches',
                                               ['enable-logging'])
         option_chrome.add_experimental_option(

@@ -27,5 +27,7 @@ class TestRegistrationAndLoginForm():
         page = RegistrationAndLoginPage(browser, self.main_page_url)
         page.open_page()
         page.login_new_user()
+        # time.sleep(30)
         page.should_be_login_username(By.XPATH,
             f'//a[text()="Welcome {RegistrationAndLoginPage.user_data[0]}"]')
+        # page.should_be_login_username(By.CSS_SELECTOR, '#nameofuser')
