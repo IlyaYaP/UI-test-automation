@@ -29,8 +29,10 @@ def browser(request):
         option_chrome.add_experimental_option(
                                     'prefs',
                                     {'intl.accept_languages': user_language})
+        service = Service()
         browser = webdriver.Chrome(
-            service=Service(ChromeDriverManager().install()),
+            service=service,
+            # service=Service(ChromeDriverManager().install()),
             options=option_chrome)
     elif browser_name == 'firefox':
         print('\nstart firefox browser for test..')
