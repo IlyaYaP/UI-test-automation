@@ -38,3 +38,4 @@ class PlacingAnOrderLocators():
 
     phone_locator = (By.XPATH, '//a[text()="Sony xperia z5"]')
     laptop_locator = (By.XPATH, '//a[text()="MacBook Pro"]')
+    monitor_locator = (By.XPATH, '//a[text()="ASUS Full HD"]')
