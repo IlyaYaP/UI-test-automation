@@ -29,3 +29,12 @@ class ShoppingCartLocators():
     cart_button_novbar = (By.XPATH, '//a[text()="Cart"]')
     product_title = (By.XPATH, '//td[text()="Iphone 6 32gb"]')
     place_order_button = (By.XPATH, '//a[text()="Place Order"]')
+
+
+class PlacingAnOrderLocators():
+    phones_categories_button = (By.CSS_SELECTOR, "[onclick='byCat('phone')']")
+    laptops_categories_button = (By.CSS_SELECTOR, "[onclick='byCat('notebook')']")
+    monitors_categories_button = (By.CSS_SELECTOR, "[onclick='byCat('monitors')']")
+
+    phone_locator = (By.XPATH, '//a[text()="Sony xperia z5"]')
+    laptop_locator = (By.XPATH, '//a[text()="MacBook Pro"]')
