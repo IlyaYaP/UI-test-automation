@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Fri Jul 28 12:58:53 GMT 2023","Fri Jul 28 12:58:53 GMT 2023","0","tests","test_registration_and_login","TestRegistrationAndLoginForm","","","test_registration_form",""
+"broken","Fri Jul 28 12:58:55 GMT 2023","Fri Jul 28 12:58:55 GMT 2023","0","tests","test_shopping_cart","TestShoppingCart","","","test_shopping_cart",""
+"broken","Fri Jul 28 12:58:54 GMT 2023","Fri Jul 28 12:58:54 GMT 2023","0","tests","test_registration_and_login","TestRegistrationAndLoginForm","","","test_login_form",""
+"broken","Fri Jul 28 12:58:53 GMT 2023","Fri Jul 28 12:58:53 GMT 2023","0","tests","test_contact_message","TestContactMessageForm","","","test_contact_message_form",""
