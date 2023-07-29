@@ -18,3 +18,14 @@ class ContactMessageData():
 
 class ShoppingCartData():
     add_cart_message = 'Product added'
+
+
+class PlacingOrderData():
+    added_message = 'Product added'
+    place_orsder_informations = [fake.name(),
+                                 fake.country(),
+                                 fake.city(),
+                                 fake.credit_card_number(),
+                                 fake.month(),
+                                 fake.year()]
+    sweet_alert_message = 'Thank you for your purchase!'

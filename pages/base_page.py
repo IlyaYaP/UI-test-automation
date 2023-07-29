@@ -1,11 +1,7 @@
-import os
-
 import allure
-import time
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from allure_commons.types import AttachmentType
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class BasePage():
@@ -22,16 +18,22 @@ class BasePage():
     def find_element(self, locator):
         '''Функция поиска элемента.'''
         return self.browser.find_element(*locator)
-    
+
+    def find_elements(self, locator):
+        '''Функция поиска всех указанных элемента.'''
+        return self.browser.find_elements(*locator)
+
     def is_alert_message_present(self, allert_message):
         '''Функция проверки появления алерта с соответствующим сообщением.'''
-        with allure.step('Проверяем, что появился алерт с соответствующим сообщением'):
-
+        with allure.step('Проверяем, что появился алерт \
+                         с соответствующим сообщением'):
             try:
-                WebDriverWait(self.browser, timeout=1).until(EC.alert_is_present(), 'Timed out waiting.')
+                WebDriverWait(self.browser, timeout=1).until(
+                    EC.alert_is_present(), 'Timed out waiting.')
                 sign_up_alert = self.browser.switch_to.alert
-                assert sign_up_alert.text == allert_message, f'The message in the alert box does not match the expected, {sign_up_alert.text}'
-                # allure.attach(self.browser.get_screenshot_as_png(), name='Screenshot', attachment_type=AttachmentType.PNG)
+                assert sign_up_alert.text == allert_message, f'The message \
+                    in the alert box does not match the expected,\
+                    {sign_up_alert.text}'
                 sign_up_alert.accept()
             except TimeoutException:
                 return False
@@ -45,11 +47,12 @@ class BasePage():
             except (NoSuchElementException):
                 return False
             return True
-    
+
     def is_element_present_timeout(self, how, what):
         '''Функция проверки элемента на странице, ожидая.'''
         try:
-            WebDriverWait(self.browser, timeout=2).until(EC.presence_of_all_elements_located((how, what)))
+            WebDriverWait(self.browser, timeout=2).until(
+                EC.presence_of_all_elements_located((how, what)))
             # self.browser.find_element(how, what)
         except (TimeoutException):
             return False

@@ -1,11 +1,12 @@
 import allure
 import pytest
-import time
-from data.data import RegistrationData
 from selenium.webdriver.common.by import By
+
+from data.data import RegistrationData
 from pages.registration_and_login_page import RegistrationAndLoginPage
 
 
+@pytest.mark.run(order=1)
 @pytest.mark.registration_and_login_tests(scope='class', autouse=True)
 @allure.feature('Тесты регистрации и аутентификации нового пользователя.')
 class TestRegistrationAndLoginForm():
@@ -27,7 +28,5 @@ class TestRegistrationAndLoginForm():
         page = RegistrationAndLoginPage(browser, self.main_page_url)
         page.open_page()
         page.login_new_user()
-        # time.sleep(30)
         page.should_be_login_username(By.XPATH,
             f'//a[text()="Welcome {RegistrationAndLoginPage.user_data[0]}"]')
-        # page.should_be_login_username(By.CSS_SELECTOR, '#nameofuser')

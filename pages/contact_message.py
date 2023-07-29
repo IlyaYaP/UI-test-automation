@@ -1,8 +1,9 @@
 import allure
-import time
-from .base_page import BasePage
-from data.locators import ContactMessageLocators
+
 from data.data import ContactMessageData
+from data.locators import ContactMessageLocators
+
+from .base_page import BasePage
 
 
 class ContactMessage(BasePage):

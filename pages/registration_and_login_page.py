@@ -1,10 +1,10 @@
 import allure
-import time
-from .base_page import BasePage
-from data.locators import RegistrationLocators, LoginLocators
-from data.data import RegistrationData
 from allure_commons.types import AttachmentType
-from selenium.webdriver.common.by import By
+
+from data.data import RegistrationData
+from data.locators import LoginLocators, RegistrationLocators
+
+from .base_page import BasePage
 
 
 class RegistrationAndLoginPage(BasePage):
@@ -56,6 +56,10 @@ class RegistrationAndLoginPage(BasePage):
 
     def should_be_login_username(self, *locator):
         '''Проверка наличия имя пользователя, после успешной регистрации'''
-        with allure.step('Проверяем, что после успешной регистрации и входа мы видим имя пользователя.'):
+        with allure.step('Проверяем, что после успешной\
+                         регистрации и входа мы видим имя пользователя.'):
             assert self.is_element_present_timeout(*locator), 'Login name is not presented.'
-
+        with allure.step('Делаем скриншот.'):
+            allure.attach(self.browser.get_screenshot_as_png(),
+                          name='Screenshot',
+                          attachment_type=AttachmentType.PNG)

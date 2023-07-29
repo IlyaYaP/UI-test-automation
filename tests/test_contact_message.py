@@ -1,11 +1,11 @@
 import allure
 import pytest
-import time
+
 from data.data import ContactMessageData
-from selenium.webdriver.common.by import By
 from pages.contact_message import ContactMessage
 
 
+@pytest.mark.run(order=2)
 @pytest.mark.contact_message_tests(scope='class', autouse=True)
 @allure.feature('Тесты формы отправления сообщения.')
 class TestContactMessageForm():
