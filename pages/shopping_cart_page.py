@@ -73,10 +73,11 @@ class ShoppingCartPage(BasePage):
     def add_product_cart(self, category_locator, product_locator):
         category_button = self.find_element(category_locator)
         category_button.click()
-        # product_button = self.find_element(product_locator)
-        # product_button.click()
         ignored_exceptions = (NoSuchElementException, StaleElementReferenceException,)
-        WebDriverWait(self.browser, timeout=2, ignored_exceptions=ignored_exceptions).until(EC.presence_of_all_elements_located((product_locator)))
+        WebDriverWait(self.browser,
+                      timeout=2,
+                      ignored_exceptions=ignored_exceptions).until(
+            EC.presence_of_all_elements_located((product_locator)))
         product_button = self.find_element(product_locator)
         product_button.click()
         add_cart_button = self.find_element(
