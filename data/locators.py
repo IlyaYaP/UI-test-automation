@@ -36,7 +36,8 @@ class PlacingAnOrderLocators():
     laptops_categories_button = (By.XPATH, '//a[text()="Laptops"]')
     monitors_categories_button = (By.XPATH, '//a[text()="Monitors"]')
 
-    phone_locator = (By.XPATH, '//a[text()="Samsung galaxy s7"]')
+    # phone_locator = (By.XPATH, '//a[text()="Samsung galaxy s7"]')
+    phone_locator = (By.CSS_SELECTOR, 'a[href="prod.html?idp_=1"]')
     laptop_locator = (By.XPATH, '//a[text()="MacBook Pro"]')
     monitor_locator = (By.XPATH, '//a[text()="ASUS Full HD"]')
 
