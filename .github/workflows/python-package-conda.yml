@@ -24,7 +24,7 @@ jobs:
         run: sudo apt-get install google-chrome-stable
       - name: Run Test
         if: always()
-        run: pytest -s -v --alluredir=result_allure --tb=line 
+        run: pytest -s -v --alluredir=result_allure --tb=long 
         continue-on-error: true
 
       - name: Get Allure history
