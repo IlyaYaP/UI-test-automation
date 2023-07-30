@@ -1,7 +1,7 @@
 # Небольшой проект по автоматизации тестирования UI.
 В данном проекте реализована автоматизация тестирования UI с использованием GitHub Actions и генерацией Allure-отчетов в GitHub Pages.
 
-# ![example workflow](https://github.com/IlyaYaP/UI-test-automation/actions/workflows/main.yml/badge.svg)
+# ![example workflow](https://github.com/IlyaYaP/UI-test-automation/actions/workflows/python-package-conda.yml/badge.svg)
 
 [![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=Python)](https://www.python.org/)
 [![pytest](https://img.shields.io/badge/-pytest-464646?style=flat-square&logo=pytest)](https://docs.pytest.org/en/stable/contents.html/)
