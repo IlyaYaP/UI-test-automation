@@ -8,6 +8,7 @@
 [![Allure](https://img.shields.io/badge/-Allure-464646?style=flat-square&logo=Allure)](http://allure.qatools.ru/)
 [![GitHub%20Actions](https://img.shields.io/badge/-GitHub%20Actions-464646?style=flat-square&logo=GitHub%20actions)](https://github.com/features/actions/)
 [![GitHub%20Pages](https://img.shields.io/badge/-GitHub%20Pages-464646?style=flat-square&logo=GitHub%20Pages)](https://pages.github.com/)
+[![GitHub%20Pages](https://img.shields.io/badge/-Selenium-464646?logo=selenium)](https://www.selenium.dev/)
 ### Стек технологий:
 Стек: Python, Pytest, Selenium, Allure.
 - Автоматизация тестирования UI с использованием GitHub Actions и генерацией Allure-отчетов в GitHub Pages.
