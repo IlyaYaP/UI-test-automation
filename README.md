@@ -1,7 +1,7 @@
 # Небольшой проект по автоматизации тестирования UI.
 В данном проекте реализована автоматизация тестирования UI с использованием GitHub Actions и генерацией Allure-отчетов в GitHub Pages.
 
-[![main-workflow](https://github.com/vamotest/allure-report/actions/workflows/main-workflow.yml/badge.svg)](https://github.com/vamotest/allure-report/actions/workflows/main-workflow.yml)
+# ![example workflow](https://github.com/IlyaYaP/UI-test-automation.git/actions/workflows/main.yml/badge.svg)
 
 [![Python](https://img.shields.io/badge/-Python-464646?style=flat-square&logo=Python)](https://www.python.org/)
 [![pytest](https://img.shields.io/badge/-pytest-464646?style=flat-square&logo=pytest)](https://docs.pytest.org/en/stable/contents.html/)
