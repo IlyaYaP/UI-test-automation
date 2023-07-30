@@ -15,7 +15,8 @@ class TestShoppingCart():
 
     @pytest.mark.parametrize('category_locator, product_locator',
                              [PlacingAnOrderLocators.laptop_locators,
-                              PlacingAnOrderLocators.phone_locators])
+                              PlacingAnOrderLocators.phone_locators,
+                              PlacingAnOrderLocators.monitor_locators])
     @pytest.mark.add_product_cart_test()
     @allure.story('Тест добавления продуктов в корзину.')
     def test_add_product_cart(self,

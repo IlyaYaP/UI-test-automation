@@ -73,7 +73,8 @@ class ShoppingCartPage(BasePage):
     def add_product_cart(self, category_locator, product_locator):
         category_button = self.find_element(category_locator)
         category_button.click()
-        ignored_exceptions = (NoSuchElementException, StaleElementReferenceException,)
+        ignored_exceptions = (NoSuchElementException,
+                              StaleElementReferenceException,)
         WebDriverWait(self.browser,
                       timeout=2,
                       ignored_exceptions=ignored_exceptions).until(

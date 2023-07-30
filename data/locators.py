@@ -34,8 +34,7 @@ class ShoppingCartLocators():
 class PlacingAnOrderLocators():
     phones_categories_button = (By.XPATH, '//a[text()="Phones"]')
     laptops_categories_button = (By.XPATH, '//a[text()="Laptops"]')
-    monitors_categories_button = (By.CSS_SELECTOR,
-                                  "[onclick='byCat('monitors')']")
+    monitors_categories_button = (By.XPATH, '//a[text()="Monitors"]')
 
     phone_locator = (By.XPATH, '//a[text()="Sony xperia z5"]')
     laptop_locator = (By.XPATH, '//a[text()="MacBook Pro"]')
@@ -43,6 +42,7 @@ class PlacingAnOrderLocators():
 
     laptop_locators = [laptops_categories_button, laptop_locator]
     phone_locators = [phones_categories_button, phone_locator]
+    monitor_locators = [monitors_categories_button, monitor_locator]
 
     place_order_button = (By.XPATH, '//button[text()="Place Order"]')
     place_order_form = (By.CSS_SELECTOR, '.modal.fade.show form input')
